@@ -379,7 +379,7 @@ static NSMutableArray *tweens_ = nil;
     double p=0;
     double a=c;
     if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-    if (a < abs(c)) { a=c; s=p/4; }
+    if (a < fabs(c)) { a=c; s=p/4; }
     else s = p/(2*3.1419) * asin (c/a);
     t--;
     return -(a*pow(2,10*t) * sin( (t*d-s)*(2*3.1419)/p )) + b;
@@ -390,7 +390,7 @@ static NSMutableArray *tweens_ = nil;
     double p=0;
     double a=c;
     if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-    if (a < abs(c)) { a=c; s=p/4; }
+    if (a < fabs(c)) { a=c; s=p/4; }
     else s = p/(2*3.1419) * asin (c/a);
     return a*pow(2,-10*t) * sin( (t*d-s)*(2*3.1419)/p ) + c + b;
 }
@@ -400,7 +400,7 @@ static NSMutableArray *tweens_ = nil;
     double p=0;
     double a=c;
     if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
-    if (a < abs(c)) { a=c; s=p/4; }
+    if (a < fabs(c)) { a=c; s=p/4; }
     else s = p/(2*3.1419) * asin (c/a);
     if (t < 1) {
         t--;
